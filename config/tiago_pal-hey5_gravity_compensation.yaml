@@ -1,0 +1,35 @@
+gravity_compensation_tutorial:
+  type: "force_control/GravityCompensationTutorial"
+  robot_model_chains: ["hand_palm_link"]
+  dt: 0.01
+
+  viscous_friction: 0.0
+  velocity_tolerance: 0.0
+  static_friction: 0.0
+
+  joints:
+    torso_lift_joint:
+      type: static
+    arm_1_joint:
+      type: actuated
+      motor_torque_constant: 0.0
+      reduction_ratio: 0.0
+    arm_2_joint:
+      type: actuated
+      motor_torque_constant: 0.136
+      reduction_ratio: 100.0
+    arm_3_joint:
+      type: actuated
+      motor_torque_constant: -0.087
+      reduction_ratio: 100.0
+    arm_4_joint:
+      type: actuated
+      motor_torque_constant: -0.087
+      reduction_ratio: 100
+    arm_5_joint:
+      type: static
+    arm_6_joint:
+      type: static
+    arm_7_joint:
+      type: static
+

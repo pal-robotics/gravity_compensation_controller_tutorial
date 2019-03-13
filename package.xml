@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>gravity_compensation_controller_tutorial</name>
+  <version>0.0.3</version>
+  <description>Tutorial that shows how to implement a gravity compensation controller, using the ROS control interface</description>
+
+  <maintainer email="adria.roig@pal-robotics.com">Adria Roig</maintainer>
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>controller_interface</depend>
+  <depend>hardware_interface</depend>
+  <depend>rbdl</depend>
+  <depend>roscpp</depend>
+  <depend>ddynamic_reconfigure</depend>
+  <depend>pluginlib</depend>
+
+  <doc_depend>doxygen</doc_depend>
+
+  <export>
+    <controller_interface plugin="${prefix}/gravity_compensation_controller_tutorial_plugins.xml" />
+    <rosdoc config="rosdoc.yaml" />
+  </export>
+
+</package>

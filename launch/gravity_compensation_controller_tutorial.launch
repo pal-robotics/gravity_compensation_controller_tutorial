@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="end_effector" default="pal-gripper"/>
+  <arg name="robot" default="tiago"/>
+
+  <!-- Load the parameters -->
+  <rosparam command="load" file="$(find gravity_compensation_controller_tutorial)/config/$(arg robot)_$(arg end_effector)_gravity_compensation.yaml" />
+
+  <!--Spawn the controller -->
+  <node name="gravity_compensation_tutorial" pkg="controller_manager" type="spawner" output="screen" args="--timeout 120 gravity_compensation_tutorial" />
+
+
+</launch>
