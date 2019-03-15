@@ -27,9 +27,15 @@ gravity_compensation_tutorial:
       motor_torque_constant: -0.087
       reduction_ratio: 100
     arm_5_joint:
-      type: static
+      type: no_control
+      motor_torque_constant: 0.0
+      reduction_ratio: 0.0
     arm_6_joint:
-      type: static
+      type: no_control
+      motor_torque_constant: 0.0
+      reduction_ratio: 0.0
     arm_7_joint:
-      type: static
+      type: no_control
+      motor_torque_constant: 0.0
+      reduction_ratio: 0.0
 

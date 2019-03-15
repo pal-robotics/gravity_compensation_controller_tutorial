@@ -10,7 +10,8 @@ namespace force_control
 enum JointType
 {
   STATIC, /*!< Joint not actuated in the controller */
-  ACTUATED /*!< Joint actuaded in the controller. Resource of the controller */
+  ACTUATED, /*!< Joint actuaded in the controller. Resource of the controller */
+  ACTUATED_NO_CONTROL /*!< Joint commanded constantly with zero effort. Resource of the controller */
 };
 
 
