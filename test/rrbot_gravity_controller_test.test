@@ -1,0 +1,8 @@
+<launch>
+  <include file="$(find rrbot_gazebo)/launch/rrbot_world.launch" />
+
+  <rosparam command="load" file="$(find gravity_compensation_controller_tutorial)/config/rrbot_gravity_compensation.yaml" />
+
+  <test test-name="rrbot_gravity_controller_test" pkg="gravity_compensation_controller_tutorial" type="rrbot_gravity_controller_test" time-limit="60.0"/>
+
+</launch>

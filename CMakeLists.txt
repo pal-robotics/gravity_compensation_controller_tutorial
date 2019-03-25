@@ -52,3 +52,21 @@ install(DIRECTORY launch/
 install(DIRECTORY config/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config)
 
+if (CATKIN_ENABLE_TESTING)
+
+    set(TEST_REQUIRED_CATKIN_COMPONENTS
+        controller_manager_msgs
+        gazebo_msgs
+        ${REQUIRED_CATKIN_COMPONENTS})
+
+    find_package(rostest REQUIRED)
+    find_package(catkin REQUIRED COMPONENTS ${TEST_REQUIRED_CATKIN_COMPONENTS})
+
+    include_directories(SYSTEM ${catkin_INCLUDE_DIRS})
+
+    add_rostest_gtest(rrbot_gravity_controller_test test/rrbot_gravity_controller_test.test test/rrbot_gravity_controller_test.cpp)
+    target_link_libraries(rrbot_gravity_controller_test ${catkin_LIBRARIES} ${PROJECT_NAME})
+    add_dependencies(rrbot_gravity_controller_test ${catkin_EXPORTED_TARGETS})
+
+endif(CATKIN_ENABLE_TESTING)
+

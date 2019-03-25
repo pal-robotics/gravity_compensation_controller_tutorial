@@ -1,0 +1,17 @@
+gravity_compensation_tutorial:
+  type: "force_control/GravityCompensationTutorial"
+  dt: 0.01
+
+  viscous_friction: 0.0
+  velocity_tolerance: 0.0
+  static_friction: 0.0
+
+  joints:
+    single_rrbot_joint1:
+      type: actuated
+      motor_torque_constant: 1.0
+      reduction_ratio: 1.0
+    single_rrbot_joint2:
+      type: actuated
+      motor_torque_constant: 1.0
+      reduction_ratio: 1.0

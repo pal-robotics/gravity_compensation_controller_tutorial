@@ -15,6 +15,10 @@
   <depend>ddynamic_reconfigure</depend>
   <depend>pluginlib</depend>
 
+  <test_depend>controller_manager_msgs</test_depend>
+  <test_depend>gazebo_msgs</test_depend>
+  <test_depend>rrbot_gazebo</test_depend>
+
   <doc_depend>doxygen</doc_depend>
 
   <export>
