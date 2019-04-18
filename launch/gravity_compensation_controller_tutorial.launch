@@ -3,9 +3,15 @@
 
   <arg name="end_effector" default="pal-gripper"/>
   <arg name="robot" default="tiago"/>
+  <arg name="simulation" default="false"/>
 
   <!-- Load the parameters -->
-  <rosparam command="load" file="$(find gravity_compensation_controller_tutorial)/config/$(arg robot)_$(arg end_effector)_gravity_compensation.yaml" />
+  <group if="$(arg simulation)">
+  	<rosparam command="load" file="$(find gravity_compensation_controller_tutorial)/config/$(arg robot)_$(arg end_effector)_gravity_compensation_simulation.yaml" />
+  </group>
+  <group unless="$(arg simulation)">
+  	<rosparam command="load" file="$(find gravity_compensation_controller_tutorial)/config/$(arg robot)_$(arg end_effector)_gravity_compensation.yaml" />
+  </group>
 
   <!--Spawn the controller -->
   <node name="gravity_compensation_tutorial" pkg="controller_manager" type="spawner" output="screen" args="--timeout 120 gravity_compensation_tutorial" />

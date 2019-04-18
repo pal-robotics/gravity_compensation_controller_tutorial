@@ -1,0 +1,40 @@
+gravity_compensation_tutorial:
+  type: "force_control/GravityCompensationTutorial"
+  robot_model_chains: ["gripper_link"]
+  dt: 0.01
+
+  viscous_friction: 0.0
+  velocity_tolerance: 0.0
+  static_friction: 0.0
+
+  joints:
+    torso_lift_joint:
+      type: static
+    arm_1_joint:
+      type: actuated
+      motor_torque_constant: 1.0
+      reduction_ratio: 1.0
+    arm_2_joint:
+      type: actuated
+      motor_torque_constant: 1.0
+      reduction_ratio: 1.0
+    arm_3_joint:
+      type: actuated
+      motor_torque_constant: 1.0
+      reduction_ratio: 1.0
+    arm_4_joint:
+      type: actuated
+      motor_torque_constant: 1.0
+      reduction_ratio: 1.0
+    arm_5_joint:
+      type: no_control
+      motor_torque_constant: 0.0
+      reduction_ratio: 0.0
+    arm_6_joint:
+      type: no_control
+      motor_torque_constant: 0.0
+      reduction_ratio: 0.0
+    arm_7_joint:
+      type: no_control
+      motor_torque_constant: 0.0
+      reduction_ratio: 0.0
