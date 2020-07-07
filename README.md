@@ -39,7 +39,9 @@ This launch file contains three arguments:
 
 - **robot** : By default tiago. Is the robot where we launch this controller.
 - **end_effector** : By default is pal-gripper. End effector mounted on the robot. There are three options: pal-gripper, pal-hey4, schunk-wsg.
-- **simulation** : By defualt is false. If true, allows to run it on simulation.
+- **simulation** : By default is false. If true, allows to run it on simulation.
+- **spawn** : By default is true. If false, only loads the controller without starting it.
+- **controller_ns** : By default is gravity_compensation_tutorial. Is the namespace of the controller and the controller name.
 
 This launch file loads the specific parameters from the config files, loads the controller and starts it. All of this could be done manually by loading the specific parameters and then call the controller_manager services to load and start the controller.
 
@@ -71,6 +73,10 @@ There are specific config files to launch the simulation with TIAGo. It will be 
 ```
 $ roslaunch gravity_compensation_controller_tutorial gravity_compensation_controller_tutorial.launch simulation:=true robot:=robot_used end_effector:=end_effector_used
 ```
+
+## Learning by demonstration
+
+Visit our repository [learning_gui](https://github.com/pal-robotics/learning_gui) to discover how to use this controller to teach new motions to the robot.
 
 ## Documentation
 

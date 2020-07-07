@@ -22,9 +22,14 @@ catkin_package(
 )
 
 include_directories(
-  include
+  SYSTEM
   ${catkin_INCLUDE_DIRS}
 )
+
+include_directories(
+  include
+)
+
 
 add_library(${PROJECT_NAME} src/gravity_compensation_controller.cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
