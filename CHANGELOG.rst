@@ -2,8 +2,8 @@
 Changelog for package gravity_compensation_controller_tutorial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.4 (2021-12-21)
+------------------
 * Merge branch 'load_controller' into 'master'
   Allow to spawn controller in the desired ns to override default gravity_compensation_controller
   See merge request apps/gravity_compensation_controller_tutorial!5

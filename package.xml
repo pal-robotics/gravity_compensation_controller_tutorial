@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>gravity_compensation_controller_tutorial</name>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <description>Tutorial that shows how to implement a gravity compensation controller, using the ROS control interface</description>
 
   <maintainer email="adria.roig@pal-robotics.com">Adria Roig</maintainer>
